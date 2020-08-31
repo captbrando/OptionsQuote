@@ -12,7 +12,7 @@ Few assumptions or notes:
 * You need to create a time-based trigger to run the script periodically. If you want to pass the random value into the script for tracking you can. It will guarantee that Google sheets sees it as a new formula and calculates it. Just be careful not to abuse this and get blocked.
 
 ## Google Sheets integration
-If you are integrating with Google Sheets, you need a formula to call the script. I found the `=IMPORTXML()` function to be the most reliable. The assumption in my case is that the above random value script will put the random value in cell T1, so I pass that in as an argument to ensure things refresh. Here's an example to get you started:
+If you are integrating with Google Sheets, you need a formula to call the script. I found the `=IMPORTXML()` function to be the most reliable. The assumption in my case is that the above random value script will put the random value in cell T1, so I pass that in as an argument to ensure things refresh. Cell B4 is the cell with the options contract ticker symbol. Here's an example to get you started:
 
 `=importxml(concatenate("https://www.example.net/path/to/optprice.py?c=",B4,"&rand=",$T$1), "//body"),0)`
 
