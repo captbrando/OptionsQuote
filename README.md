@@ -16,7 +16,7 @@ If you are integrating with Google Sheets, you need a formula to call the script
 
 `=importxml(concatenate("https://www.example.net/path/to/optprice.py?c=",B4,"&rand=",$T$1), "//body"),0)`
 
-Then it just comes down to formatting the cells and boom. You will also need to create a time-based trigger to run the
+Then it just comes down to formatting the cells and boom. You will also need to create a time-based trigger to run the script.
 
 ## Bugs & Contact
 This script is provided to you free of charge with no expressed or implied warranty. USE AT YOUR OWN RISK. To file a bug, suggest a patch, or contact me, [visit GitHub](https://github.com/captbrando/OptionsQuote/).
